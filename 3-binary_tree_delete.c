@@ -29,6 +29,9 @@ void binary_tree_delete(binary_tree_t *tree)
 	if (!tree)
 	{
 		free_bt(tree);
+		tree->left = NULL;
+		tree->right = NULL;
+		tree->n = 0;
 	}
 
 }
