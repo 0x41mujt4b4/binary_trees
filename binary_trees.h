@@ -23,22 +23,7 @@ struct binary_tree_s
 
 typedef struct binary_tree_s binary_tree_t;
 
-/**
- * free_bt - a function that frees a binary tree.
- * @tree: a pointer to the root node of the tree to be freed
- *
- * Return: Nothing
- */
-void free_bt(binary_tree_t *tree)
-{
-    if (tree == NULL)
-        return;
-
-    free_bt(tree->left);
-    free_bt(tree->right);
-
-    free(tree);
-}
+void free_bt(binary_tree_t *tree);
 
 typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
